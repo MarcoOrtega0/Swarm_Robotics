@@ -1,79 +1,73 @@
 #!/bin/bash 
 # Define la lista del menú aqui
-echo "******************************************" 
-echo "         Escuela Politécnica Nacional     "
-echo "               SWARM ROBOTS               "
+echo "***************************************************************************************" 
 echo "" 
-echo "Menu para inicializar el banco de pruebas "
+echo "                                             /\/\ " 
+echo "                                             {o,o}" 
+echo "                                             |)__)" 
+echo "                                      =======''=''=======" 
 echo "" 
-echo "******************************************" 
+echo "                                 ESCUELA POLITECNICA NACIONAL                           "
+echo "                                         SWARM ROBOTS               "
 echo "" 
-echo "1) One_Robot : Test para 1 agente  "
-echo "   Dim:10x10 mts"
-echo "   Obst: "
-echo "   -1 cilindro radio=0.21 pos=[1,1]" 
-echo "2) Cruz : Prueba de cruce 4 agentes "
-echo "   Dim:12x12 mts"
-echo "   Obst:"
-echo "   -intercolisiones  "
-echo "3) Linea_4: Formación en linea 4 agentes"
-echo "   Dim:24x24 mts"
-echo "   Obst: "
-echo "   -intercolisiones" 
-echo "4) Linea_6: Formación en linea 6 agentes"
-echo "   Dim:24x24 mts"
-echo "   Obst: "
-echo "   -intercolisiones" 
-echo "5) Square: Formación cuadrado 4 agentes"
-echo "   Dim:24x24 mts"
-echo "   Obst: "
-echo "   -intercolisiones" 
-echo "   -2 cilindros radio=0.21 pos=[(2,2);(1,-2)]" 
-echo "   -2 cubos dim=1x1x1 pos=[(-3,-3);(-2,2)]" 
-echo "6) Turtle4: Formación rombo 4 agentes"
-echo "   Dim:Hexagono Base Turtlebot package"
-echo "   Obst: "
-echo "   -intercolisiones" 
-echo "   -9 cilindros radio=0.15 matriz 3x3 en (0,0)" 
-echo "7) Turtle6: Formación Hexagonal 6 agentes"
-echo "   Dim:Hexagono Base Turtlebot package"
-echo "   Obst: "
-echo "   -intercolisiones" 
-echo "   -9 cilindros radio=0.15 matriz 3x3 en (0,0)" 
+echo "***************************************************************************************"
+echo "" 
+echo "" 
+echo "Menú para inicializar el banco de pruebas: "
+echo "" 
+echo "1) One_Robot_Cube : Prueba para 1 agente para la evasión de un cubo  "
+echo "2) One_Robot_Cylinder : Prueba para 1 agente para la evasión de un cilindro "
+echo "3) One_Robot_Wall : Prueba para 1 agente para la evasión de una pared "
+echo "4) Two_Robots : Prueba para   intercolisiones  entre 2 agentes"
+echo "5) Two_Robots_Obstacle : Prueba para 2 agentes con obstaculos "
+echo "6) Three_Robots : Prueba para intercolisiones entre 3 agentes "
+echo "7) Four_Robots_Diamond: Prueba para intercolisiones entre 4 agentes"
+echo "8) Four_Robots_Square: Prueba para evasión de obstaculos con 4 agentes"
+echo "9) Six_Robots: Prueba para intercolisiones con 6 agentes"
+echo "10) Salir"
+echo "" 
 
 export TURTLEBOT3_MODEL=waffle_pi
 PS3="Seleccionar el mundo: " 
-select opt in one_robot cruz linea_4 linea_6 square turtle_4 turtle_6 salir; 
+select opt in One_Robot_Cube One_Robot_Cylinder One_Robot_Wall Two_Robots Two_Robots_Obstacle Three_Robots Four_Robots_Diamond Four_Robots_Square Six_Robots  salir; 
 do 
     case $opt in 
-        one_robot) 
-            echo "Prueba para 1 solo robot" 
-            . one_robot.sh
+        One_Robot_Cube) 
+            echo "Prueba para 1 robot (cubo)" 
+            . one_robot_cube.sh
             ;; 
-        cruz) 
-            echo "Test para colisión en forma cruz"
-            . cruz_4.sh
-            ;; 
-        linea_4) 
-            echo "Formación en linea 4 robots"
-            . line_4.sh
-            ;; 
-        linea_6) 
-            echo "Formación en linea 6 robots"
-            . line_6.sh
-            ;; 
-        square) 
-            echo "Formación cuadrada cruce con obstaculos"
-            . square_4.sh
-            ;; 
-        turtle_4) 
-            echo "Formación rombo cruce con obstaculos"
-            . turtle_4.sh 
-            ;;   
-        turtle_6) 
-            echo "Formación rombo cruce con obstaculos"
-            . turtle_6.sh 
-            ;;                            
+        One_Robot_Cylinder) 
+            echo "Prueba para 1 robot (cilindro)" 
+            . one_robot_cylinder.sh
+            ;;             
+        One_Robot_Wall) 
+            echo "Prueba para 1 robot (pared)" 
+            . one_robot_wall.sh
+            ;;                
+        Two_Robots) 
+            echo "Prueba para 2 robots (sin obstaculos)" 
+            . two_robot.sh
+            ;;             
+        Two_Robots_Obstacle) 
+            echo "Prueba para 2 robots (con obstaculos)" 
+            . two_robot_obst.sh
+            ;;              
+        Three_Robots) 
+            echo "Prueba para 3 robots" 
+            . three_robot.sh
+            ;;             
+        Four_Robots_Diamond) 
+            echo "Prueba para 4 robots (formación diamante)" 
+            . four_robots_diamond.sh
+            ;;  
+        Four_Robots_Square) 
+            echo "Prueba para 4 robots (formación cuadrada)" 
+            . four_robots_square.sh
+            ;;  
+        Six_Robots)
+            echo "Prueba para 6 robots (formación hexagonal)" 
+            . six_robots_hexa.sh
+            ;;                      
         salir) 
             break 
             ;; 
