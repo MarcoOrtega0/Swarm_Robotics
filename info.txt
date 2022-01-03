@@ -1,0 +1,57 @@
+Worlds:
+
+world1.world: mapa pequeño 10x10
+world2.world: mapa mediano 12x12
+world4.world: mapa pequeño 10x10 con obstaculos
+
+Pruebas
+ONE_ROBOT:
+	one_robot_[obstacle].sh
+	-cube
+	-cylinder
+	-wall
+	
+	One_robot.slx
+	One_Robot.mlx
+	* 3 pruebas
+	
+TWO_ROBOTS:
+	two_robot_[obstacle].sh
+	-
+	-obst
+	
+	Two_robots.mlx
+	Two_Robots.slx
+	Two_Robots_v2.slx
+	
+	*3 pruebas
+	-intercolision
+	-intercolisión con solución
+	-multiples colisiones
+
+THREE_ROBOTS:
+	three_robot.sh
+	
+	Three_robots.mlx
+	Three_Robots.slx
+	*1 prueba
+	-intercolisiones cruce
+	
+FOUR_ROBOTS:
+	four_robots_[formación].sh 
+	-diamond
+	-square
+	
+	Four_robots.mlx
+	Four_Robots_v2.slx
+	*2 pruebas 
+	-formación diamante
+	-formación cuadrado (obstaculos)
+SIX_ROBOTS:
+	six_robots_[formación].sh	
+	-hexa
+	
+	Six_Robots.mlx
+	Six_Robots.slx
+	*1 prueba
+	-formación hexagonal
