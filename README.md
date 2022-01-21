@@ -31,7 +31,7 @@ Además, dentro de Matlab será necesario contar como mínimo con:
 <ol>
   <li>Inicialización, comportamiento enjambre (Archivo *.mlx)</li>
   <li>Ejecución (Simulación en run paced mode) (Archivo *.slx)</li>
-  <li>Una fez finalizada la prueba adquiir y análizar los datos de simulación (Archivo *.mlx)</li>
+  <li>Una fez finalizada la prueba adquirir y análizar los datos de simulación (Archivo *.mlx)</li>
 </ol>
 
 <b>Modificación:</b>
