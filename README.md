@@ -23,7 +23,7 @@ Además, dentro de Matlab será necesario contar como mínimo con:
 
 <b>Ejecución:</b>
 <p>Para la ejecución del banco de pruebas se abre a la par el archivo main_swarm.mlx en MATLAB y el menu de Gazebo</p>
-*** imagen 1
+![image](https://user-images.githubusercontent.com/86685506/150549956-dec4b8a9-9a46-4ebf-9c91-78ca81c55d61.png)
 <p>Donde se seleccionará el banco de pruebas y los archivos de Matlab-Simulink en función del número de agentes</p>
 <p>Una vez abiertos los documentos y el banco de pruebas se realizan los siguientes pasos:</p>
 <ol>
