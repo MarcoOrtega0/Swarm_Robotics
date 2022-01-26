@@ -31,7 +31,7 @@ Además, dentro de Matlab será necesario contar como mínimo con:
 <ol>
   <li>Inicialización, comportamiento enjambre (Archivo *.mlx)</li>
   <li>Ejecución (Simulación en run paced mode) (Archivo *.slx)</li>
-  <li>Una fez finalizada la prueba adquirir y análizar los datos de simulación (Archivo *.mlx)</li>
+  <li>Una vez finalizada la prueba adquirir y analizar los datos de simulación (Archivo *.mlx)</li>
 </ol>
 
 <b>Modificación:</b>
@@ -39,6 +39,6 @@ Además, dentro de Matlab será necesario contar como mínimo con:
 <ul>
 <li> Banco de Pruebas -> multi_robot </li>
 <li> Arquitectura de control -> Simulink</li>
-<li> Planeación y Visualización de datos -> Matlab .mlx </li>
+<li> Planeación y Visualización de datos -> MATLAB .mlx </li>
 </ul>
 
