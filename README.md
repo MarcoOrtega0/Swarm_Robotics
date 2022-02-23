@@ -1,4 +1,4 @@
-# Swarm_Robotics
+# Swarm Robotics
 Requisitos del Sistema:
 
 ![image](https://user-images.githubusercontent.com/86685506/150550991-b6a95e9b-730d-414d-823d-5c4b3e1d5479.png)
